@@ -1,2 +1,7 @@
-<h1>Shops#new</h1>
-<p>Find me in app/views/shops/new.html.erb</p>
+<h1>create a shop</h1>
+<hr />
+<%= form_for @shop do |f| %>
+  <%= f.label :isle %>
+  <%= f.text_field :isle, required: true, autofocus: true %>
+  <%= f.submit %>
+  <% end %>
