@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  isle: MyString
+  body: MyText
+  shop: one
+
+two:
+  isle: MyString
+  body: MyText
+  shop: two
