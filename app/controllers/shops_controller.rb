@@ -1,16 +1,17 @@
 class ShopsController < ApplicationController
- # before_action :set_shop [:show ]
+ # before_action :set_shop only: [:show ]
 
   def index
     @shops = Shop.all
   end
 
   def show
+    @shop = Shop.find(params[:id])
   end
 
   def new
     @shop = Shop.new
-    render partial: "form"
+    # render partial: "form"
   end
 
   def create
@@ -19,7 +20,7 @@ class ShopsController < ApplicationController
     if @shop.save
       redirect_to shops_path(@shop)
     else
-      render :new 
+      render :new
 
     end
 
